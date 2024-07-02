@@ -3,31 +3,22 @@ const bcrypt = require('bcrypt');
 
 // Define the schema for Employee
 const EmployeeSchema = new mongoose.Schema({
-    employeeId: {
-        type: String,
-        unique: true,
-        required: true
-    },
-    employeeName: {
+    firstName: {
         type: String,
     },
-    position: {
-        type: String,
-    },
-    contactNumber: {
+    lastName: {
         type: String,
     },
     email: {
         type: String,
     },
-    basicSalary: {
-        type: Number,
+    password: {
+        type: String,
     },
 });
 
-// Calculate total salary before saving
+// Hash the password before saving
 EmployeeSchema.pre('save', async function(next) {
-    // Hash the password if it exists
     if (this.password) {
         const salt = await bcrypt.genSalt(10);
         this.password = await bcrypt.hash(this.password, salt);
