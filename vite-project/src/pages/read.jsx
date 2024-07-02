@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Table, Button } from "react-bootstrap";
-import em1 from "../assets/em1.png";
-import "../styles/createEm.css";
+
 
 function AllEmployee() {
   const [employees, setEmployees] = useState([]);
@@ -39,22 +38,15 @@ function AllEmployee() {
   };
 
   const handleClick = () => {
-    navigate("/pages/createEmployee");
+    navigate("/create");
   };
 
   return (
     <div className="container mt-5">
       <div className="row">
         <div className="col">
-          <h5 className="mb-4 font-weight-bold">
-            Welcome Disara,
-          </h5>
-          <button
-            className="btn btn-outline-dark"
-            onClick={() => navigate("/pages")}
-          >
-            Close
-          </button>
+         
+         
         </div>
       </div>
 

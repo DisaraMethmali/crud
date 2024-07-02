@@ -41,9 +41,7 @@ function UpdateEmployee() {
   return (
     <div className="container mt-4">
       <div className="row">
-        <div className="col-md-6">
-          <img src={em1} alt="Employee" className="em1" style={{ width: '400px', height: '400px' }} />
-        </div>
+        
         <div className="col-md-6">
           <h5 className="mb-4 font-weight-bold">Update Employee</h5>
           <form onSubmit={updateEmployee}>
