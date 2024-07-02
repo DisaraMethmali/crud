@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import em1 from '../assets/em1.png';
+
 
 function UpdateEmployee() {
   const { id } = useParams();
